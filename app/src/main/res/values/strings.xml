@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">KebabMenu</string>
+    <string name="welcome">Welcome</string>
+    <string name="EnterName">Enter Your Name:</string>
+    <string name="YourName">Your Name Is:</string>
+    <string name="YourFamily">Your Family Is:</string>
+    <string name="EnterFamily">Enter Your Family:</string>
+    <string name="OK">OK</string>
+    <string name="ConfirmInfo">Please Confirm Your Information</string>
+    <string name="Save">Save</string>
+    <string name="Edit">Edit</string>
+    <string name="PhoneNumber">Enter Your Number </string>
+    <string name="Dial">Dial</string>
+
+
+</resources>
