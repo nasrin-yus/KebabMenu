@@ -7,6 +7,7 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Handler;
 import android.support.annotation.NonNull;
@@ -94,12 +95,15 @@ public class MainActivity extends AppCompatActivity {
             mNotificationManager.createNotificationChannel(channel);
         }
 
-        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(getApplicationContext(), "SematecChannel")
+        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(getApplicationContext(), "NewsChanel")
                 .setSmallIcon(R.mipmap.ic_launcher) // notification icon
                 .setContentTitle(title) // title for notification
                 .setContentText(message)// message for notification
                 .setAutoCancel(true); // clear notification after click
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+
+       // Intent intent = new Intent(getApplicationContext(), WebView.class);
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://edition.cnn.com/"));
+
         PendingIntent pi = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
         mBuilder.setContentIntent(pi);
         mNotificationManager.notify(0, mBuilder.build());
